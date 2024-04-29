@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Predictions</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url('https://free4kwallpapers.com/uploads/originals/2020/07/06/black-red-texture-wallpaper.jpg');
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Fixed background */
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+    height: 100vh;  
+    text-decoration-color: beige;
+}
+
+        h1 {
+            color: white;
+        }
+        .prediction {
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: white; /* Change prediction text color to white */
+        }
+        .accuracy {
+            margin-bottom: 20px;
+            font-size: 18px;
+            color: white; /* Change accuracy text color to white */
+        }
+        .graph {
+            margin-top: 20px;
+        }
+        .graph1 {
+            margin-top: 20px;
+            width: 800px; /* Adjust width as needed */
+            height: 500px; /* Adjust height as needed */
+            margin: 0 auto; /* Center the image horizontally */
+        }
+    </style>
+</head>
+<body>
+    <h1>Predictions</h1>
+    <div class="accuracy">Accuracy: {{ accuracy }}</div>
+    <div class="prediction">Prediction 1: {{ predictions[0] }}</div>
+    <div class="prediction">Prediction 2: {{ predictions[1] }}</div>
+    <center>
+        <h1> Data Visualization</h1>
+    </center>
+    <div class="graph">
+        <img src="data:image/png;base64,{{ plot_url }}" alt="Bar Graph">
+    </div>
+    <br/>
+    <br/>
+    <center>
+        <h1>Displaying the Hourly Visualization</h1>
+    </center>
+    <div class="graph1">
+        <img src="data:image/png;base64,{{ plot_url1 }}" alt="Bar Graph" width="100%" height="100%">
+    </div>
+    <br/>
+    <br/>
+    
+    <div class="graph1">
+        <img src="data:image/png;base64,{{ plot_url_bar_graph }}" alt="Arrest Counts Pie Chart">
+    </div>
+</body>
+</html>
