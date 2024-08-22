@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    html,* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-image: url('https://free4kwallpapers.com/uploads/originals/2020/07/06/black-red-texture-wallpaper.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white; /* Change text color to white */
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      padding: 16px;
+    }
+    .par{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-style: Times New Roman;
+    }
+
+    .card {
+      width: calc(25% - 16px);
+      background-color: rgba(255, 255, 255, 0.5); /* Smokey white background */
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .card .image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card .content {
+      padding: 16px;
+      text-align: center;
+    }
+
+    .card .content h2 {
+      margin-bottom: 8px;
+    }
+
+    .box {
+      display: block;
+      background-color: antiquewhite;
+    }
+
+    .carousel-container {
+      width: 80%; /* Adjust width as needed */
+      height: 100%;
+      overflow-x: auto; /* Enable horizontal scrolling */
+      overflow-y: hidden; /* Hide vertical scrolling */
+      margin: auto; /* Center the carousel */
+      margin-top: 20px; /* Add space from the top */
+    }
+
+    .carousel {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start; /* Adjust alignment for flex-start */
+      font-family: Arial;
+    }
+
+    .carousel__list {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      perspective: 300px;
+    }
+
+    .carousel__item {
+      display: flex;
+      flex-shrink: 0; /* Prevent items from shrinking */
+      align-items: center;
+      justify-content: center;
+      color: black;
+      font-size: 10px;
+      width: 250px;
+      height: 250px;
+      margin-right: 10px; /* Adjust spacing between items */
+      border-radius: 12px;
+      box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.5);
+      position: relative;
+      transition: all .3s ease-in;
+    }
+
+    /* Adjust positioning for the first item */
+    .carousel__item:first-child {
+      margin-left: 10px; /* Adjust spacing for the first item */
+    }
+
+    /* Adjust positioning for the last item */
+    .carousel__item:last-child {
+      margin-right: 0; /* Remove margin for the last item */
+    }
+
+    /* Add more styles for the rest of the images */
+
+    .carousel__text {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .carousel__item:hover .carousel__text {
+      opacity: 1;
+    }
+
+    /* Set dimensions for images */
+    .carousel__item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+    .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 10vh; /* This ensures the button is vertically centered */
+    }
+
+    /* Style for the button */
+    .button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 24px;
+        padding: 20px;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: background-color 0.3s;
+    }
+
+    /* Styling for the hover effect */
+    .button:hover {
+        background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <br/>
+  <br/>
+  <center>
+    <h1 style="font-size: 65px;">Crime Prediction</h1>
+    <br/>
+    <div class="box">
+      <p style="font-size: 30px; font-style: italic;color: black;">"Unlock insights from crime data using advanced machine learning techniques."</p>
+    </div>
+  </center>
+  <br/>
+  <div class="carousel-container">
+    <div class="carousel">
+      <ul class="carousel__list">
+        <!-- Adjust images and content for each carousel item -->
+        <li class="carousel__item">
+          <img src="https://media.istockphoto.com/photos/crime-scene-picture-id979502094?k=6&m=979502094&s=170667a&w=0&h=VO3IsPrUj89xUI-sSfWlVlgcsdbZfDt3D-oln_8nJYU=" alt="Slide 1">
+          <span class="carousel__text">
+            <h2>Murder</h2>
+            <p>Crime data analysis to uncover patterns and insights, shedding light on the dynamics and factors influencing murder occurrences.</p>
+          </span>
+        </li>
+        <li class="carousel__item">
+          <img src="https://www.factinate.com/wp-content/uploads/2017/07/robbery_05767900.jpg" alt="Slide 2">
+          <span class="carousel__text">
+            <h2>Robbery</h2>
+            <p>Explore predictive insights on robbery patterns through advanced machine learning analysis of crime data.</p>
+          </span>
+        </li>
+        <li class="carousel__item">
+          <img src="https://cdn.cfr.org/sites/default/files/styles/open_graph_article/public/image/2021/02/human-trafficking-protest.jpg" alt="Slide 3">
+          <span class="carousel__text">
+            <h2>Human Trafficking</h2>
+            <p>Explore insights on human trafficking patterns and trends through machine learning analysis.</p>
+          </span>
+        </li>
+        <li class="carousel__item">
+          <img src="https://tse2.mm.bing.net/th?id=OIP.ny2hRfCUHAlgK4w1HJgmoQHaEK&pid=Api&P=0&h=220" alt="Slide 4">
+          <span class="carousel__text">
+            <h2>Assault</h2>
+            <p>Predictive machine learning models applied to assault crime data for analysis and pattern recognition.</p>
+          </span>
+        </li>
+        <li class="carousel__item">
+          <img src="https://www.shouselaw.com/wp-content/uploads/2020/11/battery.jpg" alt="Slide 5">
+          <span class="carousel__text">
+            <h2>Battery</h2>
+            <p>Using machine learning, analyze crime data to predict instances of battery.</p>
+          </span>
+        </li>
+        <li class="carousel__item">
+          <img src="https://www.wklaw.com/wp-content/uploads/2013/11/Cyberstalking-PC-646.9.jpg" alt="Slide 6">
+          <span class="carousel__text">
+            <h2>Stalking</h2>
+            <p>Utilizing machine learning for crime data analysis to predict and prevent instances of stalking.</p>
+          </span>
+        </li>
+        <li class="carousel__item">
+          <img src="https://www.mlive.com/resizer/raHMpCSH5y9XooKA0etZk33Mplk=/1280x0/smart/advancelocal-adapter-image-uploads.s3.amazonaws.com/image.mlive.com/home/mlive-media/width2048/img/grpress/news_impact/photo/aljpg-8147e1978ec3cfb6.jpg" alt="Slide 7">
+          <span class="carousel__text">
+            <h2>Weapons Violation</h2>
+            <p>Applying machine learning techniques to analyze patterns and predict instances of weapons violation in crime data.</p>
+          </span>
+        </li>
+        <li class="carousel__item">
+          <img src="https://www.shouselaw.com/wp-content/uploads/2022/02/child-kidnapping.jpg" alt="Slide 8">
+          <span class="carousel__text">
+            <h2>Kidnapping</h2>
+            <p>Applying machine learning techniques to analyze patterns and predict instances of kidnapping in crime data.</p>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <br/>
+   
+   <center>
+    <div class="par">
+    <p style="font-size: 30px; font-style: TimesNewRoman;">If you are interested in predicting the next crime, please upload a .csv file and provide the target attribute you want to predict for the next crime.</p>
+
+    <br/>
+    
+    <p style="font-size: 30px; font-style: italic;">If you want to upload your own dataset then Proceed here</p>
+</div>
+</center>
+    <br/>
+    <br/>
+    
+  </center>
+  <div class="button-container">
+    <!-- Button with onclick event to navigate to the index page -->
+    <button class="button" onclick="window.location.href = 'index';">GO</button>
+</div>
+
+  <script>
+    const carouselList = document.querySelector('.carousel__list');
+    const carouselItems = document.querySelectorAll('.carousel__item');
+    const elems = Array.from(carouselItems);
+
+    carouselList.addEventListener('click', function (event) {
+      var newActive = event.target;
+      var isItem = newActive.closest('.carousel__item');
+
+      if (!isItem || newActive.classList.contains('carousel__item_active')) {
+        return;
+      };
+
+      update(newActive);
+    });
+
+    const update = function(newActive) {
+      const newActiveIndex = Array.from(newActive.parentNode.children).indexOf(newActive);
+
+      elems.forEach((item, index) => {
+        const itemPos = index - newActiveIndex;
+        item.dataset.pos = itemPos;
+      });
+    };
+  </script>
+</body>
+</html>
